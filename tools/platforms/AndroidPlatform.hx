@@ -109,10 +109,10 @@ class AndroidPlatform extends PlatformTarget
 		defaults.merge(project);
 		project = defaults;
 
-		/*for (excludeArchitecture in project.excludeArchitectures)
+		for (excludeArchitecture in project.excludeArchitectures)
 		{
 			project.architectures.remove(excludeArchitecture);
-		}*/
+		}
 
 		if (command != "display" && command != "clean")
 		{
