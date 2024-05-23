@@ -91,7 +91,7 @@ class IOSPlatform extends PlatformTarget
 				title: ""
 			};
 
-		defaults.architectures = [Architecture.ARM64];
+		defaults.architectures = [Architecture.ARMV7, Architecture.ARM64];
 		defaults.window.width = 0;
 		defaults.window.height = 0;
 		defaults.window.fullscreen = true;
@@ -100,6 +100,11 @@ class IOSPlatform extends PlatformTarget
 		for (i in 1...project.windows.length)
 		{
 			defaults.windows.push(defaults.window);
+		}
+
+		for (excludeArchitecture in defaults.excludeArchitectures)
+		{
+			defaults.architectures.remove(excludeArchitecture);
 		}
 
 		defaults.merge(project);
