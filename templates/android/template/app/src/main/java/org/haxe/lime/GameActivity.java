@@ -14,6 +14,7 @@ import android.util.Log;
 import android.view.KeyCharacterMap;
 import android.view.KeyEvent;
 import android.view.View;
+import android.view.WindowManager;
 import android.webkit.MimeTypeMap;
 import org.haxe.extension.Extension;
 import org.libsdl.app.SDLActivity;
@@ -107,6 +108,14 @@ public class GameActivity extends SDLActivity {
 	protected void onCreate (Bundle state) {
 
 		super.onCreate (state);
+
+		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
+			
+			WindowManager.LayoutParams lp = getWindow().getAttributes();
+			lp.layoutInDisplayCutoutMode = WindowManager.LayoutParams.LAYOUT_IN_DISPLAY_CUTOUT_MODE_SHORT_EDGES;
+			getWindow().setAttributes(lp);
+
+		}
 
 		assetManager = getAssets ();
 		handler = new Handler ();
