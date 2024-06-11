@@ -55,10 +55,10 @@
 [submodule "project/lib/mbedtls"]
 	path = project/lib/mbedtls
 	url = https://github.com/Mbed-TLS/mbedtls
+	branch = 555f84735aecdbd76a566cf087ec8425dfb0c8ab
 [submodule "project/lib/mojoal"]
 	path = project/lib/mojoal
 	url = https://github.com/openfl/libmojoal
 [submodule "project/lib/hashlink"]
 	path = project/lib/hashlink
 	url = https://github.com/HaxeFoundation/hashlink
-  
