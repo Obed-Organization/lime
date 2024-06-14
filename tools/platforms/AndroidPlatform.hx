@@ -478,7 +478,7 @@ class AndroidPlatform extends PlatformTarget
 		context.ANDROID_GRADLE_PLUGIN = project.config.getString("android.gradle-plugin", "7.3.1");
 		context.ANDROID_USE_ANDROIDX = project.config.getString("android.useAndroidX", "true");
 		context.ANDROID_ENABLE_JETIFIER = project.config.getString("android.enableJetifier", "false");
-		context.ANDROID_SUPPORTED_MIME_TYPES = project.config.getArrayString("android.supportedMimeTypes", []);
+		context.ANDROID_MIME_TYPES = project.config.getArrayString("android.mimeType", []);
 		context.ANDROID_LIBRARY_PROJECTS = [];
 
 		if (!project.environment.exists("ANDROID_SDK") || !project.environment.exists("ANDROID_NDK_ROOT"))
