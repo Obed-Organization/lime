@@ -27,7 +27,8 @@
 
 			</intent-filter>
 
-			::foreach ANDROID_SUPPORTED_MIME_TYPES::
+			::if (ANDROID_MIME_TYPES != null)::
+			::foreach ANDROID_MIME_TYPES::
 			<intent-filter>
 
 				<action android:name="android.intent.action.VIEW" />
@@ -35,6 +36,7 @@
 				<data android:mimeType="::__current__::" />
 
 			</intent-filter>
+			::end::
 			::end::
 
 		</activity>
