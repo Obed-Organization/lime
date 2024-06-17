@@ -109,8 +109,6 @@ public class GameActivity extends SDLActivity {
 
 	protected void onCreate (Bundle state) {
 
-		vibrator = (Vibrator)mSingleton.getSystemService (Context.VIBRATOR_SERVICE);
-		
 		super.onCreate (state);
 
 		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
@@ -130,6 +128,7 @@ public class GameActivity extends SDLActivity {
 		}
 
 		assetManager = getAssets ();
+		vibrator = (Vibrator)mSingleton.getSystemService (Context.VIBRATOR_SERVICE);
 		handler = new Handler ();
 
 		Extension.assetManager = assetManager;
